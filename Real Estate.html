@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Atlantis Real Estate Agency">
+    <meta name="keywords" content="Real Estate, Property, House, Apartment">
+    <meta name="author" content="Dariusz Staryk">
+    <title>Atlantis Real Estate Agency</title>
+    
+    <link rel="shortcut icon" href="img/home3.png">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">  <!-- font-family: 'Roboto', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i&display=swap" rel="stylesheet">  <!-- font-family: 'Noto Serif', serif; -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+    
+    * {box-sizing: border-box; margin: 0px; font-family: 'Roboto', sans-serif;}
+
+                                /* # Theme Colors: RED #fa6839, BLUE #1f9ad6, GREEN #98bd15 */
+    
+    /* Copyright informations of images */
+
+    .image_source {position: absolute; bottom: 14px; right: 14px; background-color: #ffffff60; height: fit-content; padding: 4px 6px; border: 1px solid white;}
+    .image_source, .image_source a {font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 0.4px; font-weight: bold; border-radius: 3px; color: white; text-decoration: none;}
+    .image_source:hover {background-color: rgba(0, 0, 0, 0.5); color: white; cursor: pointer;}
+    .image_source:hover, .image_source:hover a {color: white;} 
+    .image_source a:hover {text-decoration: underline;}
+
+    .Welcome_to_Atlantis .image_source {position: absolute; bottom: 30px; left: 40px; width: fit-content; background-color:#c9c8c8 !important; color:white !important;}
+    .Welcome_to_Atlantis .image_source:hover {background-color:#979696 !important}
+    .Welcome_to_Atlantis .image_source, .Welcome_to_Atlantis .image_source a {color:white;}
+
+    .image_source_unsplash {bottom: 21px; right: 22px; height: fit-content; padding: 2px 4px !important; font-size: 11px !important; letter-spacing: 0.4px !important; position: absolute; background-color:#ffffff38 !important; color:rgba(255, 255, 255, 0.6) !important;}
+    .image_source_unsplash svg {fill:rgba(255, 255, 255, 0.6) !important;}
+    .image_source_unsplash:hover {background-color: rgba(0, 0, 0, 0.5) !important; color: white !important;}
+    .image_source_unsplash:hover svg {color: white !important; fill: white !important;}
+    
+    /* Header */
+
+    .Header {width: 100%; height: auto;}
+    .Header_Top {background-color: #3C2800; width: 100%; height: 50px; color: white; display: flex; justify-content: center; align-items: center;}
+    .Header_Top_Inside {bac5kground-color: rgb(156, 105, 1); width: 100%; margin: 0px 0px; display: flex; justify-content: space-evenly; align-items: center;}
+    .Header_Top_Inside_Left {bac5kground-color: #595c01; font-size: 22px; width: 300px; height: 100%; display: flex; justify-content: space-between; align-items: center; padding-left: 6px;}
+    .Header_Top_Inside_Right {ba5ckground-color: #8f0202; width: 536px; height: 100%; display: flex; justify-content: space-between; align-items: center;}
+
+    .Header_Top i {font-size: 18px; margin: 0px 8px; color: white; transition: 0.2s;}
+    i.fa-phone-volume {margin-left: 0px;}
+    .Header_Top p {font-size: 16px;}
+    .Header_Top_Inside_Left p:first-of-type {m4argin-right: 2vw;}
+    .Header_Top_Inside_Right p {ma5rgin-right: 76px;}
+    .Header_Top_Inside_div {backg5round-color: #666666; display: flex; justify-content: flex-start; align-items: center;}
+
+    .Header_Top i:hover {color: #F7941D; cursor: pointer; transform: scale(1.2);}
+    
+    .Header_Bottom {background-color: #f5f5f5; position: relative; width: 100%; height: 100%; color: #3C2800; display: flex; justify-content: center; align-items: center;}
+    .Header_Bottom_Inside {backg5round-color: #cecece; position: relative; width: 100%; margin: 0px 0px; height: 180px; display: flex; justify-content: space-evenly; align-items: center;}
+
+    .Header_Bottom_Inside_Left {back5ground-color: #feffdf; display: flex; justify-content: center; align-items: center; width: 300px;}
+    .Header_Bottom_Inside_Left i {color: #fa6839; font-size: 68px; margin-right: 14px;}
+    .Header_Bottom_Inside_Left div p:first-child {font-size: 54px; font-weight: 500;  letter-spacing: 1px; color:black; font-style: normal; font-family: 'Roboto', sans-serif;}
+    .Header_Bottom_Inside_Left div p {font-size: 16px; color:#979797; margin-top: -8px; font-style: italic; font-family: 'Noto Serif', serif;}
+        
+    .Header_Bottom_Inside_Right {backg5round-color: #fca8a8; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;}
+    .Header_Bottom_Inside_Right_Top {backg5round-color: #c9c8c8; display: flex; height: 100%; width: 100%; max-width: 760px; justify-content: flex-start; align-items: center;}
+    .Header_Bottom_Inside_Right_Top_Address {ba5ckground-color: #f84949; display: flex; justify-content: space-between; align-items: center; margin-right: 40px;}
+    .Header_Bottom_Inside_Right_Top_Phone {back5ground-color: #b6d5f8; display: flex; justify-content: space-between; align-items: center;}
+    .Header_Bottom_Inside_Right_Top i {font-size: 26px; color: #fa6839; background-color: white; padding: 16px; border-radius: 50%; margin: 0px 12px;}
+    div .fa-globe-americas {margin-left: 0px;}
+        .Address p:first-child, .Phone p:first-child {font-size: 17px; font-weight: bold; margin-bottom: 2px;}
+        .Address p, .Phone p {font-size: 14px; font-weight: normal; letter-spacing: 0.4px;}
+    
+    .Filler {position: absolute; right: 0px; bottom: 0px; background-color:#98bd15; width: 40%; height: 54px;}
+    .Header_Bottom_Inside_Right_Bottom {background-color: #98bd15; width: 536px; height: fit-content; display: flex; justify-content: flex-start; align-items: center;}
+    .Nav_button {width: auto; height: 54px; color: white; display: flex; justify-content: center; align-items: center;
+                 font-size: 14px; text-transform: uppercase; margin: 0px 12px; font-weight: bold; letter-spacing: 0.6px; position: relative; text-align: center;}
+    .Nav_button:hover {color: black; cursor: pointer;}
+    .Nav_button i {margin-left: 10px; }
+    .Nav_button_submenu {display: none; position: absolute; padding: 0px; top: 42px; left: 0px; width: 200px; background-color: rgba(60, 40, 0, 0.6); z-index: 20; text-align: left;}
+    .Nav_button_submenu_row {text-transform: capitalize; color: white; letter-spacing: 0.8px; font-weight: normal; padding: 14px 36px; width: 100%; height: 100%;}
+    .Nav_button_submenu_row:hover {background-color: rgba(0, 0, 0, 0.7); transition: 0.2s;}
+    .Nav_button:hover .Nav_button_submenu {display: block; cursor: pointer;}
+
+    /* Main_Screen */
+
+    .Main_Screen {position: relative; overflow: hidden;}
+    .Main_Screen_Photo {width: 100%; min-height: 400px; max-height: 700px; height: 60vw; object-fit: cover; back5ground-color:thistle;}
+    .Main_Screen_Photo_img {position: absolute; top: 0px; left: 0px; width: 100%; min-height: 400px; max-height: 700px; object-fit: cover;}
+
+        .SlideMoveNext, .SlideMoveNext_TRIAL {transform: translateX(100%);}      .SlideMoveNextREVERSE, .SlideMoveNextREVERSE_TRIAL {transform: translateX(-100%);}
+        .SlideMoveNow {transform: translateX(0%); transition: 4.0s;}
+        .SlideMoveOut {transform: translateX(-100%); transition: 4.0s;}          .SlideMoveOutREVERSE {transform: translateX(100%); transition: 4.0s;}
+
+    .Main_Screen_ArrowsTable {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: flex; justify-content: space-between; align-items: center; overflow: hidden;}
+    .Main_Screen_leftArrowIMG, .Main_Screen_rightArrowIMG {position: relative; width: 80px; height: 80px;}
+
+    .Main_Screen_ArrowsTable i {color: transparent; font-size: 38px; transition: 0.4s;}
+    .Main_Screen:hover .Main_Screen_ArrowsTable i {color:rgba(255, 255, 255, 0.4);}
+    .Main_Screen_leftArrowIMG:hover i, .Main_Screen_rightArrowIMG:hover i {color:rgba(255, 255, 255, 0.8);}
+
+    .Main_Screen_leftArrowIMG:active i {transform: translateX(-5px); transition: 0.2s;}
+    .Main_Screen_rightArrowIMG:active i {transform: translateX(5px); transition: 0.2s;}
+    
+    .Main_Screen_leftArrowIMG_arrow, .Main_Screen_rightArrowIMG_arrow {background-color: transparent; position: absolute; top: 0px; left: 0px; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; transition: 0.5s;}
+    .Main_Screen_rightArrowIMG_arrow {left: unset; right: 0px;}
+        .Main_Screen_leftArrowIMG_arrow {transform: translateX(-80px); transition: 0.5s;}
+        .Main_Screen_rightArrowIMG_arrow {transform: translateX(80px); transition: 0.5s;}
+    .Main_Screen:hover .Main_Screen_leftArrowIMG_arrow, .Main_Screen:hover .Main_Screen_rightArrowIMG_arrow {transform: translateX(0px); background-color: rgba(26, 26, 26, 0.7);}
+    .Main_Screen_leftArrowIMG:hover, .Main_Screen_rightArrowIMG:hover {cursor: pointer;}
+
+    .Main_Screen_leftArrowIMG_div  {position: absolute; left: 0px; top: 0px; width: 160px; height: 80px; object-fit: cover; transform: rotateY(90deg); background-color: transparent; text-align: right;}
+    .Main_Screen_rightArrowIMG_div {position: absolute; right: 0px; top: 0px; width: 160px; height: 80px; object-fit: cover; transform: rotateY(90deg); background-color: transparent; text-align: left;}
+
+    .Main_Screen_leftArrowIMG_img, .Main_Screen_rightArrowIMG_img {width: 80px; height: 80px; object-fit: cover;}
+    
+    .Main_Screen_leftArrowIMG:hover .animation_Arrow_leftArrow {animation: animation_Arrow_leftArrow 0.4s linear both;}
+    @keyframes animation_Arrow_leftArrow {100% {transform: rotateY(0deg);}}
+
+    .Main_Screen_rightArrowIMG:hover .animation_Arrow_rightArrow {animation: animation_Arrow_rightArrow 0.4s linear both;}
+    @keyframes animation_Arrow_rightArrow {100% {transform: rotateY(0deg);}}
+
+    .Main_Screen_Table_BOTH {back5ground-color: #f8f8f859; width: 100%; max-width: 1200px; display: flex; justify-content: space-around; align-items: flex-start;}
+    .Main_Screen_Table {width: 100%; max-width: 360px; height: fit-content; padding: 26px; margin: 0px 20px; background-color: rgba(26, 26, 26, 0.7);
+                        display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    .Main_Screen_Table p {color: white;}
+    .Main_Screen_Table:nth-child(1) {max-width: 480px; min-width: 220px; height: fit-content; align-items: flex-start; justify-content: flex-start; background-color: transparent; ba5ckground-color: grey;}
+
+    .Main_Screen_Table p:nth-child(1), .Main_Screen_Table p:nth-child(2), .Main_Screen_Table p:nth-child(3) 
+        {font-size: 46px; text-transform: capitalize; font-weight: 500; letter-spacing: 0.6px; line-height: 50px; margin-bottom: 0px;}
+    .Main_Screen_Table:nth-child(1) p:nth-child(4) {font-size: 28px; text-transform: capitalize; font-style: italic; font-family: 'Noto Serif', serif; letter-spacing: 0.8px; line-height: 56px; margin-bottom: 30px;}
+
+    .Main_Screen_Table:nth-child(2) p:nth-child(1), .Main_Screen_Table:nth-child(2) p:nth-child(2) {font-size: 32px; text-transform: capitalize; font-weight:100; letter-spacing: 0.6px; line-height: 34px;}
+    .Main_Screen_Table:nth-child(2) p:nth-child(1) span {font-weight: bold;}
+    .Main_Screen_Table:nth-child(2) p:nth-child(2) {margin-bottom: 26px;}
+
+    .Main_Screen_Table:nth-child(2) input {width: 100%; height: 46px; margin-bottom: 10px; padding-left: 14px; font-size: 14px; color:grey;}
+    .Main_Screen_Table:nth-child(2) div {width: 100%; margin-bottom: 60px; display: flex; justify-content: space-between; align-items: center;}
+    .Main_Screen_Table:nth-child(2) div input {width: 48.2%; height: 46px; margin-bottom: 10px; margin: 0px;}
+
+    .Main_Screen_Table p:last-child {font-size: 12px; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 0.8px; background-color: #fa6839; padding: 14px 26px; border-radius: 30px; width: fit-content; border: 2px solid white; transition: 0.2s;}
+    .Main_Screen_Table p:last-child:hover {background-color: transparent; border: 2px solid #fa6839; color: #fa6839; cursor: pointer;}
+    .Main_Screen_Table p:last-child:active {transform: translateY(5px); transition: 0.2s;}
+
+    .Main_Screen_ProgressBar {background-color: rgba(255, 255, 255, 0.4); position: absolute; top: 0px; left: 0px; width: 100%; height: 8px;}
+    .Main_Screen_ProgressBar_animation {animation: animation_ProgressBar 8.0s linear;}
+    @keyframes animation_ProgressBar {0% {width: 0%} 100% {width: 100%}}
+
+    .Main_Screen_PlayPause {background-color: #f057577c; back3ground-color: transparent; position: absolute; bottom: calc(60px + 2.0vw); left: 0px; width: 100%; height: 0px;}
+    .VideoControls {width: auto; height: auto; margin: 0px; padding: 0px; display: flex; justify-content: center; }
+    .VideoControls i {color:white; background-color: #ffffff38; margin: 0px; padding: 0px; border: 1px solid white; font-size: 26px;
+                      width: 44px; height: 44px; display: flex; justify-content: center; align-items: center; border-radius: 5px; transition: 0.2s;}
+    .VideoControls i:hover {background-color:#98bd15; color: #fffffff5; cursor: pointer;}
+    .VideoControls i:active {transform: scale(1.2);}
+
+    /* Property_Description */
+
+    .Property_Description {width: 100%; height: auto; display: flex; justify-content: center; align-items: center; margin: 80px 0px 80px 0px;}
+    .Property_Description_Inside {width: 1100px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    .Property_Description_Inside_Top {ba5ckground-color: #ffd6d6; text-align: center; margin-bottom: 64px;}
+    .Property_Description_Inside_Top p:first-of-type {font-size: 16px; color:#979797; margin: 0px 0px 10px 0px; text-transform: initial; font-style: italic; font-family: 'Noto Serif', serif;}
+    .Property_Description_Inside_Top p {color: black; font-size: 44px; letter-spacing: 0.4px; text-transform: capitalize; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 28px;}
+    .Property_Description_Inside_Top p span {font-weight: 500;}
+    .Property_Description_Inside_Top .FirstLine {border-bottom: 1px solid #979797; width: 250px; margin: 0 auto;}
+    .Property_Description_Inside_Top .SecondLine {border-bottom: 4px solid #fa6839; width: 80px; margin: 0 auto 0 auto; margin-top: -3px;}
+
+    .Property_Description_Inside_Bottom {back5ground-color: #fff4d0; width: 100%; display: flex; justify-content:space-around; align-items: flex-start;}
+    .Property_Description_Box {backg5round-color: #d2f4ff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+    .Property_Description_Box i {color: #fa6839; font-size: 44px; border: 2px solid #fa6839; width: 98px; height: 98px; border-radius: 50%; display: flex; justify-content: center; align-items: center;}
+    .Property_Description_Box i:hover {box-shadow: 0px 0px 10px 4px #cecece; transform: scale(1.2);}
+    .Property_Description_Box p {font-size: 16px; color:#979797; margin: 28px 0px 10px 0px; font-style: italic; font-family: 'Noto Serif', serif;}
+    .Property_Description_Box p:last-child {font-size: 44px; font-family: 'Roboto', sans-serif; font-weight: bold; font-style: normal; margin: 0px;}
+
+    .fa-ruler-combined {transform: translate(-100px, -100px); opacity: 0.0; transition: 1.2s;}
+    .fa-bed {transform: translate(100px, -100px); opacity: 0.0; transition: 1.2s;}
+    .fa-bath {transform: translate(-100px, 100px); opacity: 0.0; transition: 1.2s;}
+    .fa-calendar-alt {transform: translate(100px, 100px); opacity: 0.0; transition: 1.2s;}
+    .fa-parking {transform: translate(100px, -100px); opacity: 0.0; transition: 1.2s;}
+
+    .AnimationCLEAR {transform: translate(0px, 0px); opacity: 1.0;}
+    .AnimationCLEAR2 {transition: 0.2s;}
+
+    /* Property Highlights */
+
+  
+
+    /* Our Gallery */
+
+
+
+    /* Our Agents */
+
+    .Our_Agents {width: 100%; height: auto; display: flex; justify-content: center; align-items: center; margin: 80px 0px 80px 0px;}
+    .Our_Agents_Inside {width: 1280px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    .Our_Agents_Inside_Top {ba5ckground-color: #ffd6d6; text-align: center; margin-bottom: 64px;}
+    .Our_Agents_Inside_Top p:first-of-type {font-size: 16px; color:#979797; margin: 0px 0px 10px 0px; text-transform: initial; font-style: italic; font-family: 'Noto Serif', serif;}
+    .Our_Agents_Inside_Top p {color: black; font-size: 44px; letter-spacing: 0.4px; text-transform: capitalize; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 28px;}
+    .Our_Agents_Inside_Top p span {font-weight: 500;}
+    .Our_Agents_Inside_Top .FirstLine {border-bottom: 1px solid #979797; width: 250px; margin: 0 auto;}
+    .Our_Agents_Inside_Top .SecondLine {border-bottom: 4px solid #fa6839; width: 80px; margin: 0 auto 0 auto; margin-top: -3px;}
+
+    .Our_Agents_Inside_Bottom {ba5ckground-color: #d6d6d6; width: 100%; height: auto; display: flex; justify-content:space-evenly; align-items: flex-start;}
+        .Our_Agents_Inside_Bottom_Left, .Our_Agents_Inside_Bottom_Right {back5ground-color: #d1fcc4; ma5rgin: 0px 20px 0px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        .Our_Agents_Inside_Bottom_Left {margin-left: 40px; margin-right: 20px;} .Our_Agents_Inside_Bottom_Right {margin-left: 20px; margin-right: 40px;}
+            .Our_Agents_Inside_Bottom_Left_Top, .Our_Agents_Inside_Bottom_Right_Bottom {ba5ckground-color: #9cc7f8; max-width: 520px; width: 100%; height: auto;}
+        
+        .Our_Agents_Inside_Bottom_Left_Bottom, .Our_Agents_Inside_Bottom_Right_Top {background-color: #d9b0ff; max-width: 380px; width: 100%; max-height: 250px; object-fit: cover; overflow: hidden; border-radius: 10px;}
+            .Our_Agents_Inside_Bottom_Left_Bottom:hover, .Our_Agents_Inside_Bottom_Right_Top:hover {box-shadow: 0 0 10px 4px #aaaaaa; transition: 0.4s;}
+            .Our_Agents_Inside_Bottom_Left_Bottom {margin-top: 30px;}       .Our_Agents_Inside_Bottom_Right_Top {margin-bottom: 30px;}
+        
+        .Our_Agents_Inside_Bottom_Left_Bottom_img, .Our_Agents_Inside_Bottom_Right_Top_img {width: 100%; overflow: hidden; transform: scale(1.2); transition: 0.4s;}
+            .Our_Agents_Inside_Bottom_Left_Bottom_img:hover, .Our_Agents_Inside_Bottom_Right_Top_img:hover {transform: scale(1.5);}
+
+    .Our_Agents_Name {font-size: 18px; color: black; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 500; margin-bottom: 8px;}
+    .Our_Agents_Position {font-size: 14px; color: #979797; font-family: 'Noto Serif', serif; letter-spacing: 0.4px; font-style: italic; margin-bottom: 4px;}
+    .Our_Agents_Description {font-size: 14px; color: #979797; letter-spacing: 0.4px; line-height: 24px; border-bottom: 1px solid #cfcfcf; margin-bottom: 20px;}
+    .Our_Agents_contact_div {display: flex; justify-content: space-between; align-items: center; max-width: 400px;}
+    .Our_Agents_contact {font-size: 14px; color: #979797; letter-spacing: 0.4px; line-height: 24px;}
+    .Our_Agents_contact i {color: #fa6839; margin-right: 6px;}
+
+    .Our_Agents_Inside_Bottom_Right_Top {transform: translate(500px, 200px); opacity: 0.0; transition: 1.2s;}
+    .Our_Agents_Inside_Bottom_Left_Bottom {transform: translate(-500px, -200px); opacity: 0.0; transition: 1.2s;}
+    .AnimationCLEAR3 {transform: translate(0px, 0px); opacity: 1.0;}
+
+    /* Testimonials */
+
+   
+    /* Our Contacts */
+
+    .Our_Contacts {width: 100%; height: auto; display: flex; justify-content: center; align-items: center; ma4rgin: 80px 0px 80px 0px;}
+    .Our_Contacts_Internal {width: 1280px; height: auto; display: flex; justify-content: center; align-items: center;}
+    .Our_Contacts_Left {back4ground-color: #b0c5ff; width: 50%; height: 100%; margin-left: 40px; margin-right: 20px; display: flex; justify-content: center; align-items: center;}
+    .Our_Contacts_Left_Photo {back4ground-color: #ffe8b7; display: flex; justify-content: center; align-items: center; max-width: 450px; width: 100%; o4bect-fit: cover; overflow: hidden; border-radius: 10px;}
+    .Our_Contacts_Left_Photo img {width: 100%; overflow: hidden; transition: 0.4s;}
+    .Our_Contacts_Left_Photo img:hover {transform: scale(1.3);}
+
+    .Our_Contacts_Left_Photo {transform: scale(0.0); opacity: 0.0; transition: 1.2s;}
+    .AnimationCLEAR4 {transform: scale(1.0); opacity: 1.0;}
+
+    .Our_Contacts_Right {ba5ckground-color: #fff7d2; width: 50%; margin-left: 20px;}
+        .Our_Contacts_Right_Top {ba5ckground-color: #ffd6d6; text-align: center; margin-bottom: 24px; margin-top: 24px;}
+            .Our_Contacts_Right_Top p {color: black; font-size: 44px; letter-spacing: 0.4px; text-transform: capitalize; font-weight: 300; font-family: 'Roboto', sans-serif; margin-bottom: 24px;}
+            .Our_Contacts_Right_Top p span {font-weight: 500;}
+            .Our_Contacts_Right_Top p:last-child {font-size: 16px; color:#979797; margin: 0px 0px 10px 0px; text-transform: initial; font-style: italic; font-family: 'Noto Serif', serif;}
+            .Our_Contacts_Right_Top .FirstLine {border-bottom: 1px solid #979797; width: 250px; margin: 0 auto;}
+            .Our_Contacts_Right_Top .SecondLine {border-bottom: 4px solid #98bd15; width: 80px; margin: 0 auto 0 auto; margin-top: -3px;  margin-bottom: 24px;}
+
+        .Our_Contacts_Right_Middle {margin-bottom: 24px; margin-right: 40px;}
+        .Our_Contacts_Right_Middle p:first-child {font-size: 14px; color: #979797; letter-spacing: 0.4px; line-height: 24px; margin-bottom: 20px;}
+        .Our_Contacts_Right_Middle p {font-size: 14px; color: #979797; letter-spacing: 0.4px; line-height: 24px;}
+        .Our_Contacts_Right_Middle i {color: #fa6839; margin-right: 6px;}
+
+        .Our_Contacts_Right_Bottom {height: 70px; display: flex; justify-content: flex-start; align-items: center; background-color: #98bd15; width: 100%;}
+            .Our_Contacts_Right_Bottom p {width: auto; color: white; font-size: 18px; text-transform: capitalize ; margin: 0px 20px; font-weight: normal; letter-spacing: 0.6px;}
+            .Our_Contacts_Right_Bottom p span {font-weight: bold;}
+            .Our_Contacts_Right_Bottom input {font-size: 14px; color: white; max-width: 160px; border: unset; font-weight: 500; text-transform: initial; letter-spacing: 0.8px; background-color: #0000002f; padding: 14px 26px; border-radius: 30px; width: fit-content; margin-right: 20px; transition: 0.2s;}
+            .Our_Contacts_Right_Bottom input::placeholder {color:rgba(255, 255, 255, 0.685);}
+            .Our_Contacts_Right_Bottom div {width: fit-content; text-align: center; font-size: 12px; color: rgb(138, 138, 138); font-weight: bold; text-transform: uppercase; letter-spacing: 0.8px; background-color: white; border: 2px solid white; padding: 14px 26px; border-radius: 30px; margin-right: 20px; transition: 0.2s;}
+            .Our_Contacts_Right_Bottom div:hover {background-color: transparent; border: 2px solid white; color: white; cursor: pointer;}
+            .Our_Contacts_Right_Bottom div:active {transform: translateY(5px); transition: 0.2s;}
+
+    /* Footer */
+
+    .Footer {position: relative; width: 100%; height: 480px; height: fit-content; text-align: right; margin-bottom: 0px;}
+
+    .Footer_Top {position: relative; width: 100%; height: auto; margin: 0px 0px; display: flex; justify-content: center; align-items: center;}
+    .Footer_Top_Background {position: absolute; z-index:-500; width: 100%; height: 100%; overflow: hidden;}
+    .Footer_Top_Background_Photo {width: 60%; height: 100%; object-fit: cover;}
+    .Footer_Top_Background_Gradient {position: absolute; top: 0px; right: 0px; width: 100%; height: 100%; background-image: linear-gradient(to right, black 40%, transparent 100%);}
+    
+    .Footer_Top_Text_External {width: 100%; height: auto; display: flex; justify-content: center; align-items: center;}
+    .Footer_Top_Text_Internal {width: 100%; max-width: 1240px; height: auto; display: flex; justify-content: space-between; align-items: flex-start; margin: 100px 0px;}
+
+    .Footer_Top_Text_Box {padding: 0px 0px; margin: 0px 20px; width: 100%; max-width: 380px; height: auto; text-align: left; color: white;}
+        .Footer_Top_Text_Box:nth-child(1) i {color: #F7941D; font-size: 52px; margin-right: 6px; margin-bottom: 22px;}
+        .Footer_Top_Text_Box:nth-child(1) p:nth-child(2) {font-size: 42px; font-weight: bold; display: inline; }
+        .Footer_Top_Text_Box:nth-child(1) p:nth-child(3) {font-size: 14px; font-weight: normal; letter-spacing: 0.6px; line-height: 22px; margin-bottom: 26px;}
+        .Footer_Top_Text_Box:nth-child(1) .fab {color: white; font-size: 40px; margin-bottom: 0px;}
+        .Footer_Top_Text_Box:nth-child(1) i {color: #F7941D; font-size: 52px; margin-right: 6px; margin-bottom: 22px;}
+        .Footer_Top_Text_Box:nth-child(1) p:nth-child(2) {font-size: 42px; font-weight: bold; display: inline; }
+        .Footer_Top_Text_Box:nth-child(1) p:nth-child(3) {font-size: 16px; font-weight: normal; letter-spacing: 0.6px; line-height: 22px; margin-bottom: 26px;}
+        .Footer_Top_Text_Box:nth-child(1) .fab {color: white; font-size: 40px; margin-bottom: 0px;}
+
+        .Footer_Top_Text_Box:nth-child(2) p:nth-child(1) {color: #F7941D; font-size: 28px; font-weight: bold; margin-right: 6px; margin-bottom: 30px; line-height: 28px;}
+        .Footer_Top_Text_Box:nth-child(2) p {font-size: 16px; font-weight: normal; letter-spacing: 0.6px; line-height: 22px; margin-bottom: 18px;}
+
+        .Footer_Top_Text_Box:nth-child(3) p:nth-child(1) {color: #F7941D; font-size: 28px; font-weight: bold; margin-right: 6px; margin-bottom: 30px; line-height: 28px;}
+        .Footer_Top_Text_Box:nth-child(3) p {font-size: 16px; font-weight: normal; letter-spacing: 0.6px; line-height: 22px; margin-bottom: 18px;}
+        .Footer_Top_Text_Box:nth-child(3) p i {color: #F7941D; margin-right: 6px;}
+
+    .Footer_Bottom {background-color: white; width: 100%; height: 38px; margin-top: 0px; color: black; display: flex; justify-content: center; align-items: center;}
+    .Footer_Bottom_Inside {max-width: 1200px; width: 100%; margin: 0px 40px; display: flex; justify-content: space-between; align-items: center;}
+    .Footer_Icons {max-width: 140px; width: 100%; display: flex; justify-content: space-between; align-items: center;}
+    .Footer_Bottom p {font-size: 16px; text-align: center;}
+    .Footer_Bottom i {font-size: 17px;}
+    .Footer_Bottom i:hover {color: #F7941D; cursor: pointer; transform: scale(1.2); transition: 0.2s;}
+
+    /* Media queries */
+
+    @media screen and (max-width: 1070px) {
+            /* body {background-color:rgb(197, 231, 245);} */
+            .Main_Screen_Table:nth-child(1) p:nth-child(1), .Main_Screen_Table:nth-child(1) p:nth-child(2), .Main_Screen_Table:nth-child(1) p:nth-child(3) 
+                {font-size: 4.3vw; line-height: 4.6vw; margin-bottom: 0vw;}
+            .Main_Screen_Table:nth-child(1) p:nth-child(4) {font-size: 2.6vw; line-height: 5.4vw; margin-bottom: 2.8vw;}
+            .Main_Screen_Table:nth-child(1) p:last-child {font-size: 1.1vw; padding: 1.4vw 2.4vw;}
+            .Main_Screen_Table:nth-child(1) {width: 44vw; padding: 2.4vw; margin-right: 2.0vw; padding-right: 0px;}
+            .Main_Screen_Table:nth-child(2) {width: 34vw; padding: 2.4vw; margin-left: 2.0vw;}
+            .Main_Screen_Table:nth-child(2) p:nth-child(1), .Main_Screen_Table:nth-child(2) p:nth-child(2)
+                {font-size: 3.0vw; line-height: 3.2vw;}
+            .Main_Screen_Table:nth-child(2) p:nth-child(2) {margin-bottom: 2.4vw;}
+            .Main_Screen_Table:nth-child(2) input {padding-left: 1vw; height: 3.4vw;}
+            .Main_Screen_Table:nth-child(2) div {margin-bottom: 3.6vw; flex-direction: column;}
+            .Main_Screen_Table:nth-child(2) div input {width: 100%; height: 3.4vw;}
+            .Main_Screen_Table:nth-child(2) div input:first-child {margin-bottom: 10px;}
+            .Main_Screen_Table:nth-child(2) p:last-child {font-size: 1.1vw; padding: 1.4vw 2.4vw;}
+            .VideoControls i {width: 4.1vw; height: 4.1vw; font-size: 2.5vw;}
+    } 
+
+    @media screen and (max-width: 940px) {
+        .Our_Contacts_Right_Bottom {height: fit-content;}
+        .Our_Contacts_Right_Bottom {flex-direction: column; align-items: flex-start; margin-top: 8px;}
+        .Our_Contacts_Right_Bottom p {margin-top: 8px;}
+        .Our_Contacts_Right_Bottom input {margin-left: 20px; height: 20px; max-width: unset; width: 200px; margin-top: 8px;}
+        .Our_Contacts_Right_Bottom div {margin-left: 20px; padding: 4px 26px; width: 160px; margin-top: 8px; margin-bottom: 8px;}
+    }
+
+    @media screen and (max-width: 850px) {
+            /* body {background-color:skyblue;} */
+            .Header_Top_Inside {flex-direction: column; justify-content: flex-start;}
+            .Header_Top_Inside_Left {width: 254px; margin-left: 72px;}
+            .Header_Top_Inside_Right {width: 420px;}
+            .Filler {display: none;}
+
+            .Header_Bottom_Inside {flex-direction: column; height: fit-content;}
+            .Header_Bottom_Inside_Left {margin: 12px 0px;}
+            .Header_Bottom_Inside_Right_Bottom {width: 100%;}
+            .Header_Bottom_Inside_Right_Top {margin-bottom: 12px;}
+            .Header_Bottom_Inside_Right_Top i {font-size: 22px; padding: 10px;}
+            .Nav_button {height: 42px;}
+            .Nav_button_submenu {top: 28px; width: 160px;}
+            .Nav_button_submenu_row {padding: 10px 36px;}
+            .Nav_button_submenu {background-color: rgba(60, 40, 0, 1.0);}
+    } 
+
+    @media screen and (max-width: 840px) {
+            /* body {background-color:rgb(206, 255, 221);} */
+            .Our_Agents_contact_div {flex-direction: column; align-items: flex-start;}
+            .Our_Contacts_contact_div {flex-direction: column; align-items: flex-start;}
+    }
+
+    @media screen and (max-width: 660px) {
+        /* body {background-color:skyblue;} */
+            .Main_Screen_Table:nth-child(1) p:nth-child(1), .Main_Screen_Table:nth-child(1) p:nth-child(2), .Main_Screen_Table:nth-child(1) p:nth-child(3) 
+                {font-size: 28.6px; line-height: 30.8px;}
+            .Main_Screen_Table:nth-child(1) p:nth-child(4) {font-size: 17.6px; line-height: 34px; margin-bottom: 20px;}
+            .Main_Screen_Table:nth-child(1) p:last-child {font-size: 9px; padding: 9px 16px;}
+            .Main_Screen_Table:nth-child(1) {width: 44vw; padding: 2.4vw; margin-right: 2.0vw; padding-right: 0px;}
+
+            .Main_Screen_Table:nth-child(2) {width: 226px; padding: 16px; margin-left: 16px;}
+            .Main_Screen_Table:nth-child(2) p:nth-child(1), .Main_Screen_Table:nth-child(2) p:nth-child(2)
+                {font-size: 20px; line-height: 20.8px;}
+            .Main_Screen_Table:nth-child(2) p:nth-child(2) {margin-bottom: 16px;}
+            .Main_Screen_Table:nth-child(2) input {padding-left: 6px; height: 23px;}
+            .Main_Screen_Table:nth-child(2) div {margin-bottom: 24px;}
+            .Main_Screen_Table:nth-child(2) div input {height: 23px;}
+            .Main_Screen_Table:nth-child(2) p:last-child {font-size: 9px; padding: 9px 16px;}
+
+            .VideoControls i {width: 27.4px; height: 27.4px; font-size: 17px;}
+    } 
+
+    @media screen and (max-width: 628px) {
+    } 
+
+    @media screen and (max-width: 560px) {
+            .Footer_Top_Text_Box:nth-child(2) {margin: 0px;}
+            .Footer_Top_Text_Box:nth-child(1) {margin-right: 12px;}
+            .Footer_Top_Text_Box:nth-child(3) {margin-left: 10px;}
+    } 
+
+    body {min-width: 500px;}
+
+    </style>
+</head>
+
+<body>
+    <header class="Header">
+        <div class="Header_Top">
+            <div class="Header_Top_Inside"> 
+                <div class="Header_Top_Inside_Left">
+                    <div class="Header_Top_Inside_div">
+                        <i class="fas fa-phone-volume" title="Click to request call back"></i>
+                        <p>Request call back</p>
+                    </div>
+                    <div class="Header_Top_Inside_div">
+                        <i class="fas fa-sign-in-alt" title="Click to Login"></i>
+                        <p>Login</p>
+                    </div>
+                </div>
+                <div class="Header_Top_Inside_Right">
+                    <div class="Header_Top_Inside_div">
+                        <i class="far fa-clock" title="Click to check the hours of work"></i>
+                        <p>Open Hours: Mon-Fri: 09:00-18:00</p>
+                    </div>
+                    <div class="Header_Top_Inside_div">
+                        <i class="fab fa-facebook-f" title="Facebook"></i>
+                        <i class="fab fa-twitter" title="Twitter"></i>
+                        <i class="fab fa-instagram" title="Instagram"></i>
+                        <i class="fab fa-pinterest-p" title="Pinterest"></i>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        <div class="Header_Bottom">
+            <div class="Filler"></div>
+            <div class="Header_Bottom_Inside">
+                <div class="Header_Bottom_Inside_Left">
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <p>Atlantis</p>
+                        <p>Real Estate Agency</p>
+                    </div>
+                </div>
+                <div class="Header_Bottom_Inside_Right">
+                    <div class="Header_Bottom_Inside_Right_Top">
+                        <div class="Header_Bottom_Inside_Right_Top_Address">
+                            <i class="fas fa-globe-americas"></i>
+                            <div class="Address">
+                                <p>125 Silverado Street</p>
+                                <p>Los Angeles, CA 65525</p>
+                            </div>
+                        </div>
+                        <div class="Header_Bottom_Inside_Right_Top_Phone">
+                            <i class="fas fa-phone"></i>
+                            <div class="Phone">
+                                <p>+62 7100 1234</p>
+                                <p>bestsale@atlantis.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="Header_Bottom_Inside_Right_Bottom">
+                        <div class="Nav_button">Home
+                            <i class="fas fa-caret-down"></i>
+                            <div class="Nav_button_submenu">
+                                <div class="Nav_button_submenu_row">Home 1</div>
+                                <div class="Nav_button_submenu_row">Home 2</div>
+                            </div>
+                        </div>
+                        <div class="Nav_button">About us
+                            <i class="fas fa-caret-down"></i>
+                            <div class="Nav_button_submenu">
+                                <div class="Nav_button_submenu_row">About us 1</div>
+                                <div class="Nav_button_submenu_row">About us 2</div>
+                            </div>
+                        </div>
+                        <div class="Nav_button">Services
+                            <i class="fas fa-caret-down"></i>
+                            <div class="Nav_button_submenu">
+                                <div class="Nav_button_submenu_row">Services 1</div>
+                                <div class="Nav_button_submenu_row">Services 2</div>
+                            </div>
+                        </div>
+                        <div class="Nav_button">Gallery
+                            <i class="fas fa-caret-down"></i>
+                            <div class="Nav_button_submenu">
+                                <div class="Nav_button_submenu_row">Gallery 1</div>
+                                <div class="Nav_button_submenu_row">Gallery 2</div>
+                            </div>
+                        </div>
+                        <div class="Nav_button">Contact us
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="Main_Screen">
+        <div class="Main_Screen_Photo">
+            <img class="Main_Screen_Photo_img SlideMoveNow" src="img/architecture-1836070_1920.jpg" alt="Photo of a house for sale">
+            <img class="Main_Screen_Photo_img SlideMoveNext" src="img/old-house-2877931_1920.jpg" alt="Photo of a house for sale">
+        </div>
+        <div class="Main_Screen_ArrowsTable">
+            <div class="Main_Screen_leftArrowIMG">
+                <div class="Main_Screen_leftArrowIMG_div animation_Arrow_leftArrow">
+                    <img class="Main_Screen_leftArrowIMG_img" src="img/home-2421427_1920.jpg" alt="Previous Offer Photo">
+                </div>
+                <div class="Main_Screen_leftArrowIMG_arrow">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </div>
+            </div>
+            <div class="Main_Screen_Table_BOTH">
+                <div class="Main_Screen_Table">
+                    <p id="Main_Screen_Table_p1">267 Surf street</p>
+                    <p id="Main_Screen_Table_p2">Sydney 23987</p>
+                    <p id="Main_Screen_Table_p3">Australia</p>
+                    <p id="Main_Screen_Table_p4">$ 499,000</p>
+                    <p id="Main_Screen_Table_p5" title="More information about the House">More information</p> 
+                </div>
+                <div class="Main_Screen_Table">
+                    <p><span>Request</span> free</p>
+                    <p>consultation</p>
+                    <input type="text" name="Name" placeholder="Name">
+                    <input type="text" name="E-mail" placeholder="E-mail">
+                    <input type="text" name="Message" placeholder="Message">
+                    <div>
+                        <input type="date" name="Date">
+                        <input type="time" name="Time">
+                    </div>
+                    <p title="Click to submit the message">Submit</p> 
+                </div>
+            </div>
+            <div class="Main_Screen_rightArrowIMG">
+                <div class="Main_Screen_rightArrowIMG_div animation_Arrow_rightArrow">
+                    <img class="Main_Screen_rightArrowIMG_img" src="img/old-house-2877931_1920.jpg" alt="Next Offer Photo">
+                </div>
+                <div class="Main_Screen_rightArrowIMG_arrow">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="Main_Screen_ProgressBar Main_Screen_ProgressBar_animation">
+        </div>
+        <div class="Main_Screen_PlayPause">
+            <div class="VideoControls">
+                <i class="fas fa-pause" id="PauseKey" title="Pause the Slides"></i>
+            </div>
+        </div>
+        <div class="image_source"><a href="https://pixabay.com/pl/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1836070" target="_blank"> Pexels</a> from <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1836070" target="_blank">Pixabay</a></div>
+    </section>
+
+    <section class="Property_Description">
+        <div class="Property_Description_Inside">
+            <div class="Property_Description_Inside_Top">
+                <p>A few words about the house</p>
+                <p><span>Property</span> description</p>
+                <div class="FirstLine"></div>
+                <div class="SecondLine"></div>
+            </div>
+            <div class="Property_Description_Inside_Bottom">
+                <div class="Property_Description_Box">
+                    <span><i class="fas fa-ruler-combined"></i></span>
+                    <p>Square meters</p>
+                    <p id="SquareMeters">220</p>
+                </div>
+                <div class="Property_Description_Box">
+                    <span><i class="fas fa-bed"></i></span>
+                    <p>Bedrooms</p>
+                    <p>3</p>
+                </div>
+                <div class="Property_Description_Box">
+                    <i class="fas fa-bath"></i>
+                    <p>Bathrooms</p>
+                    <p>2</p>
+                </div>
+                <div class="Property_Description_Box">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p>Year Built</p>
+                    <p id="YearBuilt">2015</p>
+                </div>
+                <div class="Property_Description_Box">
+                    <i class="fas fa-parking"></i>
+                    <p>Car Parking</p>
+                    <p>2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Property_Highlights">
+
+    </section>
+
+    <section class="Our_Gallery">
+
+    </section>
+
+    <section class="Testimonials">
+
+    </section><hr>
+
+    <section class="Our_Agents">
+        <div class="Our_Agents_Inside">
+            <div class="Our_Agents_Inside_Top">
+                <p>The best of the best</p>
+                <p><span>Our</span> Agents</p>
+                <div class="FirstLine"></div>
+                <div class="SecondLine"></div>
+            </div>
+            <div class="Our_Agents_Inside_Bottom">
+                <div class="Our_Agents_Inside_Bottom_Left">
+                    <div class="Our_Agents_Inside_Bottom_Left_Top">
+                        <p class="Our_Agents_Name">Marylin Monroe</p>
+                        <p class="Our_Agents_Position">Seller</p>
+                        <p class="Our_Agents_Description">Marylin Monroe is a Certified Residential Specialist with over 10 years experience of helping local residents sell homes. 
+                           She achieved success due to her commitment to the enhancement of the real estate profession, client service and the community.</p>
+                        <div class="Our_Agents_contact_div">
+                            <div>
+                                <p class="Our_Agents_contact"><i class="far fa-envelope"></i>marylin.monroe@atlantis.com</p>
+                                <p class="Our_Agents_contact"><i class="fas fa-globe-americas"></i>http://www.atlantis.com/</p>
+                            </div>
+                            <div>
+                                <p class="Our_Agents_contact"><i class="fas fa-phone"></i>(123) 654-36-23</p>
+                                <p class="Our_Agents_contact"><i class="fas fa-fax"></i>(123) 654-36-99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Our_Agents_Inside_Bottom_Left_Bottom">
+                        <img class="Our_Agents_Inside_Bottom_Left_Bottom_img" src="img/woman-2794668_1920.jpg" alt="Photo of an Agent">
+                    </div>        
+                </div>
+
+                <div class="Our_Agents_Inside_Bottom_Right">
+                    <div class="Our_Agents_Inside_Bottom_Right_Top">
+                        <img class="Our_Agents_Inside_Bottom_Right_Top_img" src="img/gregory-hayes-2guarBycJJQ-unsplash.jpg" alt="Photo of an Agent">
+                    </div>
+                    <div class="Our_Agents_Inside_Bottom_Right_Bottom">
+                        <p class="Our_Agents_Name">Indiana Jones</p>
+                        <p class="Our_Agents_Position">Analyst</p>
+                        <p class="Our_Agents_Description">Indiana Jones is a Certified Residential Specialist with over 5 years experience of helping local residents sell homes. 
+                           He achieved success due to his commitment to the enhancement of the real estate profession, client service and the community.</p>
+                        <div class="Our_Agents_contact_div">
+                            <div>
+                                <p class="Our_Agents_contact"><i class="far fa-envelope"></i>indiana.jones@atlantis.com</p>
+                                <p class="Our_Agents_contact"><i class="fas fa-globe-americas"></i>http://www.atlantis.com/</p>
+                            </div>
+                            <div>
+                                <p class="Our_Agents_contact"><i class="fas fa-phone"></i>(123) 654-36-09</p>
+                                <p class="Our_Agents_contact"><i class="fas fa-fax"></i>(123) 654-36-99</p>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </section><hr>
+    
+    <section class="Our_Contacts">
+        <div class="Our_Contacts_Internal">
+            <div class="Our_Contacts_Left">
+                <div class="Our_Contacts_Left_Photo">
+                    <img src="img/thank-you-3690116_1280.jpg" alt="Our Contacts Photo">
+                </div>
+            </div>
+            <div class="Our_Contacts_Right">
+                <div class="Our_Contacts_Right_Top">
+                    <p><span>Our</span> Contacts</p>
+                    <div class="FirstLine"></div>
+                    <div class="SecondLine"></div>
+                    <p>We answer every question</p>
+                </div>
+                <div class="Our_Contacts_Right_Middle">
+                    <p>Our broker centers are located throughout the entire country ensuring you get helped almost in every place. Our professional real estate team made sure you get the highest level of help with your property issues.</p>
+                    <p><i class="fas fa-globe-americas"></i>125 Silverado Street, Los Angeles, CA 65525</p>
+                    <p><i class="far fa-clock"></i>Open Hours: Mon-Fri: 09:00-18:00</p>
+                    <p><i class="fas fa-phone"></i>(123) 654-36-23</p>
+                    <p><i class="fas fa-fax"></i>(123) 654-36-99</p>
+                </div>
+                <div class="Our_Contacts_Right_Bottom">
+                    <p><span>Submit</span> Newsletter</p>
+                    <input type="text" name="E-mail" placeholder="E-mail">
+                    <div>Subscribe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="Footer">
+        <div class="Footer_Top"> 
+            <div class="Footer_Top_Background">
+                <img class="Footer_Top_Background_Photo" src="img/auto-3091234_1920.jpg" alt="Background pattern">
+                <div class="Footer_Top_Background_Gradient"></div>
+            </div>
+            <div class="image_source"><a href="https://pixabay.com/pl/users/Alexas_Fotos-686414/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4410145" target="_blank">Alexas_Fotos</a> from <a href="https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4410145" target="_blank">Pixabay</a></div>
+            <div class="Footer_Top_Text_External">
+                <div class="Footer_Top_Text_Internal">
+                    <div class="Footer_Top_Text_Box">
+                        <i class="fas fa-paw"></i>
+                        <p>Atlantis</p>
+                        <p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque odio dignissimos ducimus</p>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-diners-club"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-discover"></i>
+                    </div>
+                    <div class="Footer_Top_Text_Box">
+                        <p>Opening Hours</p>
+                        <p>Our support available to help you 24 hours a day</p>
+                        <p>Mon - Fri: 08.00 am - 20.00 pm</p>
+                        <p>Saturday: 09.00 am - 20.00 pm</p>
+                        <p>Sunday: We Are Closed</p>
+                    </div>
+                    <div class="Footer_Top_Text_Box">
+                        <p>Contact Info</p>
+                        <p>Lit sed The Best in dolor sit amet consectetur</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 24 John Williams Park 34234. London, UK</p>
+                        <p><i class="fas fa-phone"></i> (034) 854-32-34</p>
+                        <p><i class="fas fa-envelope"></i> mail@ petsclinic.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Footer_Bottom">
+            <div class="Footer_Bottom_Inside">
+                <p>© 2019 The Big Bang Company. All Rights Reserved.</p>
+                <div class="Footer_Icons">
+                    <i class="fab fa-facebook-f" title="Facebook"></i>
+                    <i class="fab fa-twitter" title="Twitter"></i>
+                    <i class="fab fa-instagram" title="Instagram"></i>
+                    <i class="fab fa-pinterest-p" title="Pinterest"></i>
+                </div>
+            </div> 
+        </div> 
+    </footer>
+
+    <script>
+
+        // Main site animations
+
+        let counter = 1;
+        let counterNext = 2;
+        let ListOfPhotos = [
+            "img/home-2421427_1920.jpg",
+            "img/architecture-1836070_1920.jpg", 
+            "img/old-house-2877931_1920.jpg",
+            "img/auto-3091234_1920.jpg"
+        ];
+        let OpacityOUT = "1.6s";
+        let OpacityIN = "1.0s";
+        let DelayTIME = 1600;
+        function ChangeAddresses () {
+            let street = ""; let city = ""; let country = ""; let price = "";
+            let title1 = $(".SlideMoveNext").attr("src"); let title2 = $(".SlideMoveNextREVERSE").attr("src");
+            if ((title1 === "img/architecture-1836070_1920.jpg") || (title2 === "img/architecture-1836070_1920.jpg")) {street = "267 Surf Street"; city = "Sydney 23987"; country = "Australia"; price = "$ 499,000";}
+            if ((title1 === "img/old-house-2877931_1920.jpg") || (title2 === "img/old-house-2877931_1920.jpg")) {street = "14 Alexis Avenue"; city = "Athens 3211"; country = "Greece"; price = "$ 211,000";}
+            if ((title1 === "img/auto-3091234_1920.jpg") || (title2 === "img/auto-3091234_1920.jpg")) {street = "345 Rue de Channel"; city = "Paris 9123"; country = "France"; price = "$ 381,000";}
+            if ((title1 === "img/home-2421427_1920.jpg") || (title2 === "img/home-2421427_1920.jpg")) {street = "345 Sand Street"; city = "Miami 21345"; country = "USA"; price = "$ 681,000";}
+            $("#Main_Screen_Table_p1").css({'opacity': '0', transition: OpacityOUT}).delay(DelayTIME).queue(function() {$(this).text(street).css({'opacity': '1', transition: OpacityIN}).dequeue();});
+            $("#Main_Screen_Table_p2").css({'opacity': '0', transition: OpacityOUT}).delay(DelayTIME).queue(function() {$(this).text(city).css({'opacity': '1', transition: OpacityIN}).dequeue();});
+            $("#Main_Screen_Table_p3").css({'opacity': '0', transition: OpacityOUT}).delay(DelayTIME).queue(function() {$(this).text(country).css({'opacity': '1', transition: OpacityIN}).dequeue();});
+            $("#Main_Screen_Table_p4").css({'opacity': '0', transition: OpacityOUT}).delay(DelayTIME).queue(function() {$(this).text(price).css({'opacity': '1', transition: OpacityIN}).dequeue();});
+            $("#Main_Screen_Table_p5").css({'opacity': '0', transition: OpacityOUT}).delay(DelayTIME).queue(function() {$(this).css({'opacity': '1', transition: OpacityIN}).dequeue();});
+        }
+
+        function Move_Slides() {
+            if ($(".Main_Screen_Photo_img").hasClass("SlideMoveOut") || $(".Main_Screen_Photo_img").hasClass("SlideMoveOutREVERSE")) {return;} else {
+                if (FirstTime === 1) {clearTimeout(repeat); MoveSlidesFunction();}
+                if ($(".SlideMoveNextREVERSE").hasClass("SlideMoveNextREVERSE")) {
+                    $(".SlideMoveNextREVERSE").removeClass("SlideMoveNextREVERSE").addClass("SlideMoveNext");
+                    counterNext++; if (counterNext === ListOfPhotos.length) {counterNext = 0;};
+                    counterNext++; if (counterNext === ListOfPhotos.length) {counterNext = 0;};
+                    $(".SlideMoveNext").attr("src", ListOfPhotos[counterNext]);};
+                ChangeAddresses ();
+                $(".Main_Screen_ProgressBar").css({"width": "0%"}).removeClass("Main_Screen_ProgressBar_animation").css({"animation": ""});
+                $(".SlideMoveNext").removeClass("SlideMoveNext").addClass("SlideMoveNext_TRIAL");
+                    let funny_variable = $(".SlideMoveNext_TRIAL").css("transform");           // sztuczna instrukcja, żeby program zapamiętał tę wartość "transform", zanim zniknie
+                $(".SlideMoveNow").removeClass("SlideMoveNow").addClass("SlideMoveOut").delay(4000).queue(function() {
+                        $(".Main_Screen_ProgressBar").css({"width": "100%"}).css({"animation": "animation_ProgressBar 4.0s linear"});   
+                        $(this).removeClass("SlideMoveOut").addClass("SlideMoveNext");
+                            $(".Main_Screen_leftArrowIMG_img").attr("src", ListOfPhotos[counter]);
+                            counter++;                      if (counter === ListOfPhotos.length) {counter = 0;}
+                            counterNext = counter + 1;      if (counterNext === ListOfPhotos.length) {counterNext = 0;}
+                            $(".SlideMoveNext").attr("src", ListOfPhotos[counterNext]);
+                            $(".Main_Screen_rightArrowIMG_img").attr("src", ListOfPhotos[counterNext]);
+                        $(this).dequeue();});
+                $(".SlideMoveNext_TRIAL").removeClass("SlideMoveNext_TRIAL").addClass("SlideMoveNow");
+            }
+        }
+        $(".Main_Screen_rightArrowIMG").click(function() {Move_Slides();});
+        
+        $(".Main_Screen_leftArrowIMG").click(function() {
+            if ($(".Main_Screen_Photo_img").hasClass("SlideMoveOut") || $(".Main_Screen_Photo_img").hasClass("SlideMoveOutREVERSE")) {return;} else {
+                if (FirstTime === 1) {clearTimeout(repeat); MoveSlidesFunction();}
+                if ($(".SlideMoveNext").hasClass("SlideMoveNext")) {
+                    $(".SlideMoveNext").removeClass("SlideMoveNext").addClass("SlideMoveNextREVERSE");
+                    counterNext--; if (counterNext === -1) {counterNext = ListOfPhotos.length - 1;};
+                    counterNext--; if (counterNext === -1) {counterNext = ListOfPhotos.length - 1;};
+                    $(".SlideMoveNextREVERSE").attr("src", ListOfPhotos[counterNext]);};
+                ChangeAddresses ();
+                $(".Main_Screen_ProgressBar").css({"width": "0%"}).removeClass("Main_Screen_ProgressBar_animation").css({"animation": ""});
+                $(".SlideMoveNextREVERSE").removeClass("SlideMoveNextREVERSE").addClass("SlideMoveNextREVERSE_TRIAL");
+                    let funny_variable = $(".SlideMoveNextREVERSE_TRIAL").css("transform");           // sztuczna instrukcja, żeby program zapamiętał tę wartość "transform", zanim zniknie
+                $(".SlideMoveNow").removeClass("SlideMoveNow").addClass("SlideMoveOutREVERSE").delay(4000).queue(function() {
+                        $(".Main_Screen_ProgressBar").css({"width": "100%"}).css({"animation": "animation_ProgressBar 4.0s linear"});
+                        $(this).removeClass("SlideMoveOutREVERSE").addClass("SlideMoveNextREVERSE");
+                            $(".Main_Screen_rightArrowIMG_img").attr("src", ListOfPhotos[counter]);
+                            counter--;                      if (counter === -1) {counter = ListOfPhotos.length - 1;}
+                            counterNext = counter - 1;      if (counterNext === -1) {counterNext = ListOfPhotos.length - 1;}
+                            $(".SlideMoveNextREVERSE").attr("src", ListOfPhotos[counterNext]);
+                            $(".Main_Screen_leftArrowIMG_img").attr("src", ListOfPhotos[counterNext]);
+                        $(this).dequeue();});
+                $(".SlideMoveNextREVERSE_TRIAL").removeClass("SlideMoveNextREVERSE_TRIAL").addClass("SlideMoveNow");
+            }
+        });
+
+        let repeat;
+        function MoveSlidesFunction() {repeat = setInterval(Move_Slides, 8000);}
+        MoveSlidesFunction();
+        let FirstTime = 1;
+        $("#PauseKey").click(function() {
+            if (FirstTime === 1) {clearTimeout(repeat); FirstTime = 0; $("#PauseKey").attr("title", "Click to move the slides");} 
+                            else {Move_Slides(); MoveSlidesFunction(); FirstTime = 1; $("#PauseKey").attr("title", "Click to pause the slides");}
+            $(this).css({'opacity': '0', transition: "0.2s"}).delay(200).queue(function() {$(this).toggleClass("fa-pause").toggleClass("fa-play").css({'opacity': '1', transition: "0.2s"}).dequeue();});
+        });
+
+        // Main Screen Animation Stop / Start
+
+        $(window).blur(function(){if (FirstTime === 1) {clearTimeout(repeat); FirstTime = 0; $("#PauseKey").attr("title", "Click to move the slides");
+                $("#PauseKey").css({'opacity': '0', transition: "0.2s"}).delay(200).queue(function() {$(this).toggleClass("fa-pause").toggleClass("fa-play").css({'opacity': '1', transition: "0.2s"}).dequeue();});
+        }});
+        $(window).focus(function() {if (FirstTime === 0) {Move_Slides(); MoveSlidesFunction(); FirstTime = 1; $("#PauseKey").attr("title", "Click to pause the slides");
+                $("#PauseKey").css({'opacity': '0', transition: "0.2s"}).delay(200).queue(function() {$(this).toggleClass("fa-pause").toggleClass("fa-play").css({'opacity': '1', transition: "0.2s"}).dequeue();});
+        }});
+
+        // Web Elements Animations
+
+        let counter1 = 0;
+        let counter2 = 0;
+        let SquareMetersAnimation;
+        let YearBuiltAnimation;
+        let Launch1 = true; let Launch2 = true; let Launch3 = true; let Launch4 = true; let Launch5 = true; 
+        
+
+        window.onscroll = function() {
+            if (Launch1) {ActionFunction1();}
+            if (Launch2) {ActionFunction2();}
+            if (Launch3) {ActionFunction3();}
+            if (Launch4) {ActionFunction4();}
+            if (Launch5) {ActionFunction5();}
+            
+        };
+
+        function ActionFunction1() {
+            let position = $(".Property_Description_Box")[0].getBoundingClientRect();
+            if (position.bottom <= window.innerHeight) {Launch1 = false;
+                $(".fa-ruler-combined").addClass("AnimationCLEAR").delay(1200).queue(function() {$(this).addClass("AnimationCLEAR2").dequeue();});
+                $(".fa-bed").addClass("AnimationCLEAR").delay(1200).queue(function() {$(this).addClass("AnimationCLEAR2").dequeue();});
+                $(".fa-bath").addClass("AnimationCLEAR").delay(1200).queue(function() {$(this).addClass("AnimationCLEAR2").dequeue();});
+                $(".fa-calendar-alt").addClass("AnimationCLEAR").delay(1200).queue(function() {$(this).addClass("AnimationCLEAR2").dequeue();});
+                $(".fa-parking").addClass("AnimationCLEAR").delay(1200).queue(function() {$(this).addClass("AnimationCLEAR2").dequeue();});
+            }}
+
+        function ActionFunction2() {
+            let position = $("#SquareMeters")[0].getBoundingClientRect();
+            if ((position.bottom) <= window.innerHeight) {Launch2 = false;
+                SquareMetersAnimation = setInterval(SquareMetersFunction, 20);
+                YearBuiltAnimation = setInterval(YearBuiltFunction, 0);
+            }}
+
+                    function SquareMetersFunction () {counter1++;
+                            $("#SquareMeters").text(counter1);
+                            if (counter1 === 220) {clearInterval(SquareMetersAnimation);}}
+
+                    function YearBuiltFunction () {counter2++;
+                            $("#YearBuilt").text(counter2);
+                            if (counter2 === 2012) {clearInterval(YearBuiltAnimation);}}
+
+        function ActionFunction3() {
+            let position = $(".Our_Agents_Inside_Bottom_Right_Top")[0].getBoundingClientRect();
+            if ((position.bottom - 200) <= window.innerHeight) {Launch3 = false;
+                $(".Our_Agents_Inside_Bottom_Right_Top").addClass("AnimationCLEAR3");
+            }}
+
+        function ActionFunction4() {
+            let position = $(".Our_Agents_Inside_Bottom_Left_Bottom")[0].getBoundingClientRect();
+            if ((position.bottom + 200) <= window.innerHeight) {Launch4 = false;
+                $(".Our_Agents_Inside_Bottom_Left_Bottom").addClass("AnimationCLEAR3");
+            }}
+        
+        function ActionFunction5() {
+            let position = $(".Our_Contacts_Left_Photo")[0].getBoundingClientRect();
+            if ((position.bottom) <= window.innerHeight) {Launch5 = false;
+                $(".Our_Contacts_Left_Photo").addClass("AnimationCLEAR4");
+            }}
+
+    </script>
+</body>
+</html>
